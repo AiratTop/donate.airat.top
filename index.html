@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Support AiratTop — independent developer crafting self-hosted infrastructure projects. Contribute via Ethereum, USDT (TRC-20), Bitcoin, or TON." />
+    <title>Support AiratTop</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Support AiratTop" />
+    <meta property="og:description" content="Support AiratTop — independent developer crafting self-hosted infrastructure projects. Contribute via Ethereum, USDT (TRC-20), Bitcoin, or TON." />
+    <meta property="og:url" content="https://donate.airat.top/" />
+    <meta property="og:image" content="https://donate.airat.top/airattop.jpg" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Support AiratTop" />
+    <meta property="twitter:description" content="Support AiratTop — independent developer crafting self-hosted infrastructure projects. Contribute via Ethereum, USDT (TRC-20), Bitcoin, or TON." />
+    <meta property="twitter:image" content="https://donate.airat.top/airattop.jpg" />
+    <link rel="canonical" href="https://donate.airat.top/" />
+    <link rel="icon" href="airattop.jpg" type="image/jpeg" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f172a;
+        --card: rgba(15, 23, 42, 0.92);
+        --text: #f8fafc;
+        --muted: #cbd5f5;
+        --accent: #38bdf8;
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem 1.5rem;
+        background: linear-gradient(160deg, #020617 0%, #1e293b 50%, #020617 100%);
+        color: var(--text);
+      }
+
+      main {
+        width: min(680px, 100%);
+        background: var(--card);
+        border-radius: 20px;
+        padding: clamp(1.75rem, 2vw + 1rem, 3rem);
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
+        backdrop-filter: blur(10px);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      header img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(56, 189, 248, 0.4);
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+      }
+
+      h1 {
+        margin: 1.25rem 0 0.5rem;
+        font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+        letter-spacing: 0.02em;
+      }
+
+      p.lead {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      section.wallets {
+        display: grid;
+        gap: 1.25rem;
+        margin: 2rem 0;
+      }
+
+      .wallet-card {
+        padding: 1.25rem;
+        border-radius: 14px;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        background: rgba(15, 23, 42, 0.6);
+        transition: transform 200ms ease, border-color 200ms ease;
+      }
+
+      .wallet-card:hover,
+      .wallet-card:focus-within {
+        transform: translateY(-3px);
+        border-color: rgba(56, 189, 248, 0.4);
+      }
+
+      .wallet-card h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .address-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .address {
+        margin: 0;
+        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 0.95rem;
+        word-break: break-word;
+        line-height: 1.5;
+      }
+
+      .copy-button {
+        border: none;
+        border-radius: 999px;
+        padding: 0.45rem 1.1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #0f172a;
+        background: var(--accent);
+        cursor: pointer;
+        transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+      }
+
+      .copy-button:hover,
+      .copy-button:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
+        outline: none;
+      }
+
+      .copy-button:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+
+      .copy-button.copied {
+        background: #22c55e;
+        color: #032014;
+      }
+
+      .hint {
+        margin-top: 0.75rem;
+        font-size: 0.85rem;
+        color: rgba(226, 232, 240, 0.68);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.95rem;
+        color: rgba(226, 232, 240, 0.75);
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="airattop.jpg" alt="AiratTop avatar" />
+        <h1>Support AiratTop</h1>
+        <p class="lead">Independent developer building self-hosted infrastructure projects. Every contribution keeps the work going.</p>
+      </header>
+
+      <section class="wallets" aria-label="Wallet addresses">
+        <article class="wallet-card">
+          <h2>Ethereum (ETH)</h2>
+          <div class="address-row">
+            <p class="address" id="eth-address">0x11BCD50B1784eD008255c39EA602CfD82760eB09</p>
+            <button class="copy-button" type="button" data-target="eth-address">Copy</button>
+          </div>
+          <p class="hint">Ethereum mainnet</p>
+        </article>
+
+        <article class="wallet-card">
+          <h2>Tether (USDT)</h2>
+          <div class="address-row">
+            <p class="address" id="usdt-address">TJ5omTrjUQLbvL6ekvtpJiL3xyo9sT376J</p>
+            <button class="copy-button" type="button" data-target="usdt-address">Copy</button>
+          </div>
+          <p class="hint">TRC‑20 (Tron network)</p>
+        </article>
+
+        <article class="wallet-card">
+          <h2>Bitcoin (BTC)</h2>
+          <div class="address-row">
+            <p class="address" id="btc-address">bc1q4hzghg9vyp0j7q4965zh2nyyvgkvcqnxdlm579</p>
+            <button class="copy-button" type="button" data-target="btc-address">Copy</button>
+          </div>
+          <p class="hint">Bitcoin mainnet · bech32</p>
+        </article>
+
+        <article class="wallet-card">
+          <h2>Toncoin (TON)</h2>
+          <div class="address-row">
+            <p class="address" id="ton-address">UQC9YlVmGCGuxU117CX_I5I9eY78adJ60_La1VVlfdq5RVWq</p>
+            <button class="copy-button" type="button" data-target="ton-address">Copy</button>
+          </div>
+          <p class="hint">TON mainnet</p>
+        </article>
+      </section>
+
+      <footer>
+        <p>Questions or partnerships? Email <a href="mailto:mail@airat.top">mail@airat.top</a>.</p>
+        <p>More about AiratTop at <a href="https://about.airat.top" target="_blank" rel="noreferrer">about.airat.top</a> or visit <a href="https://github.com/AiratTop" target="_blank" rel="noreferrer">github.com/AiratTop</a>.</p>
+      </footer>
+    </main>
+    <script>
+      const copyButtons = document.querySelectorAll(".copy-button");
+
+      copyButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
+          const targetId = button.getAttribute("data-target");
+          const text = document.getElementById(targetId)?.textContent.trim();
+
+          if (!text) {
+            return;
+          }
+
+          try {
+            await navigator.clipboard.writeText(text);
+            button.classList.add("copied");
+            const originalText = button.textContent;
+            button.textContent = "Copied!";
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.classList.remove("copied");
+            }, 2000);
+          } catch (error) {
+            const originalText = button.textContent;
+            button.textContent = "Error";
+            setTimeout(() => {
+              button.textContent = originalText;
+            }, 2000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
