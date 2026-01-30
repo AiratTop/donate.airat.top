@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -20,247 +20,103 @@
     <meta name="google-site-verification" content="zuHpP1sB8u4uv7gVtMj2RNaGCoxq2lGMYENOCMovy1Y" />
     <meta name="yandex-verification" content="6d08a6d5c02c329e" />
     <link rel="canonical" href="https://donate.airat.top/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" href="/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest">
-    <style>
-      :root {
-        color-scheme: light dark;
-        --bg: #0f172a;
-        --card: rgba(15, 23, 42, 0.92);
-        --text: #f8fafc;
-        --muted: #cbd5f5;
-        --accent: #38bdf8;
-        font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5rem 1.5rem;
-        background: linear-gradient(160deg, #020617 0%, #1e293b 50%, #020617 100%);
-        color: var(--text);
-      }
-
-      main {
-        width: min(680px, 100%);
-        background: var(--card);
-        border-radius: 20px;
-        padding: clamp(1.75rem, 2vw + 1rem, 3rem);
-        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
-        backdrop-filter: blur(10px);
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      header img {
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid rgba(56, 189, 248, 0.4);
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
-      }
-
-      h1 {
-        margin: 1.25rem 0 0.5rem;
-        font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
-        letter-spacing: 0.02em;
-      }
-
-      p.lead {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-
-      section.wallets {
-        display: grid;
-        gap: 1.25rem;
-        margin: 2rem 0;
-      }
-
-      .wallet-card {
-        padding: 1.25rem;
-        border-radius: 14px;
-        border: 1px solid rgba(148, 163, 184, 0.15);
-        background: rgba(15, 23, 42, 0.6);
-        transition: transform 200ms ease, border-color 200ms ease;
-      }
-
-      .wallet-card:hover,
-      .wallet-card:focus-within {
-        transform: translateY(-3px);
-        border-color: rgba(56, 189, 248, 0.4);
-      }
-
-      .wallet-card h2 {
-        margin: 0 0 0.75rem;
-        font-size: 1rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--accent);
-      }
-
-      .address-row {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      .address {
-        margin: 0;
-        font-family: "SFMono-Regular", Menlo, Consolas, monospace;
-        font-size: 0.95rem;
-        word-break: break-word;
-        line-height: 1.5;
-      }
-
-      .copy-button {
-        border: none;
-        border-radius: 999px;
-        padding: 0.45rem 1.1rem;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #0f172a;
-        background: var(--accent);
-        cursor: pointer;
-        transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
-      }
-
-      .copy-button:hover,
-      .copy-button:focus-visible {
-        transform: translateY(-1px);
-        box-shadow: 0 12px 25px rgba(56, 189, 248, 0.35);
-        outline: none;
-      }
-
-      .copy-button:active {
-        transform: translateY(0);
-        box-shadow: none;
-      }
-
-      .copy-button.copied {
-        background: #22c55e;
-        color: #032014;
-      }
-
-      .hint {
-        margin-top: 0.75rem;
-        font-size: 0.85rem;
-        color: rgba(226, 232, 240, 0.68);
-      }
-
-      footer {
-        text-align: center;
-        font-size: 0.95rem;
-        color: rgba(226, 232, 240, 0.75);
-      }
-
-      footer a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition-duration: 0.01ms !important;
-          scroll-behavior: auto !important;
-          animation-duration: 0.01ms !important;
-        }
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <img src="airattop.jpg" alt="AiratTop avatar" />
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <main class="shell">
+      <header class="brand brand-centered">
+        <div class="avatar">
+          <img src="airattop.jpg" alt="AiratTop avatar" />
+        </div>
+        <p class="brand-eyebrow">donate.airat.top</p>
         <h1>Support AiratTop</h1>
-        <p class="lead">Independent developer building self-hosted infrastructure projects. Every contribution keeps the work going.</p>
+        <p class="brand-subtitle">
+          Independent developer building self-hosted infrastructure projects. Every contribution keeps the work going.
+        </p>
+        <div class="brand-actions">
+          <a class="repo-link" href="https://airat.top" target="_blank" rel="noreferrer">airat.top</a>
+          <a class="repo-link" href="https://github.com/AiratTop" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
       </header>
 
-      <section class="wallets" aria-label="Wallet addresses">
-        <article class="wallet-card">
-          <h2>Ethereum (ETH)</h2>
-          <div class="address-row">
-            <p class="address" id="eth-address">0x11BCD50B1784eD008255c39EA602CfD82760eB09</p>
-            <button class="copy-button" type="button" data-target="eth-address">Copy</button>
-          </div>
-          <p class="hint">Ethereum mainnet</p>
-        </article>
+      <section class="content">
+        <p class="lead">Choose a wallet below and copy the address. Thank you for supporting the open-source work.</p>
+        <div class="wallets" aria-label="Wallet addresses">
+          <article class="wallet-card">
+            <h2>Ethereum (ETH)</h2>
+            <div class="address-row">
+              <p class="address" id="eth-address">0x11BCD50B1784eD008255c39EA602CfD82760eB09</p>
+              <button class="copy-button" type="button" data-target="eth-address">Copy</button>
+            </div>
+            <p class="hint">Ethereum mainnet</p>
+          </article>
 
-        <article class="wallet-card">
-          <h2>Tether (USDT)</h2>
-          <div class="address-row">
-            <p class="address" id="usdt-address">TJ5omTrjUQLbvL6ekvtpJiL3xyo9sT376J</p>
-            <button class="copy-button" type="button" data-target="usdt-address">Copy</button>
-          </div>
-          <p class="hint">TRC‑20 (Tron network)</p>
-        </article>
+          <article class="wallet-card">
+            <h2>Tether (USDT)</h2>
+            <div class="address-row">
+              <p class="address" id="usdt-address">TJ5omTrjUQLbvL6ekvtpJiL3xyo9sT376J</p>
+              <button class="copy-button" type="button" data-target="usdt-address">Copy</button>
+            </div>
+            <p class="hint">TRC-20 (Tron network)</p>
+          </article>
 
-        <article class="wallet-card">
-          <h2>Bitcoin (BTC)</h2>
-          <div class="address-row">
-            <p class="address" id="btc-address">bc1q4hzghg9vyp0j7q4965zh2nyyvgkvcqnxdlm579</p>
-            <button class="copy-button" type="button" data-target="btc-address">Copy</button>
-          </div>
-          <p class="hint">Bitcoin mainnet · bech32</p>
-        </article>
+          <article class="wallet-card">
+            <h2>Bitcoin (BTC)</h2>
+            <div class="address-row">
+              <p class="address" id="btc-address">bc1q4hzghg9vyp0j7q4965zh2nyyvgkvcqnxdlm579</p>
+              <button class="copy-button" type="button" data-target="btc-address">Copy</button>
+            </div>
+            <p class="hint">Bitcoin mainnet · bech32</p>
+          </article>
 
-        <article class="wallet-card">
-          <h2>Toncoin (TON)</h2>
-          <div class="address-row">
-            <p class="address" id="ton-address">UQC9YlVmGCGuxU117CX_I5I9eY78adJ60_La1VVlfdq5RVWq</p>
-            <button class="copy-button" type="button" data-target="ton-address">Copy</button>
-          </div>
-          <p class="hint">TON mainnet</p>
-        </article>
+          <article class="wallet-card">
+            <h2>Toncoin (TON)</h2>
+            <div class="address-row">
+              <p class="address" id="ton-address">UQC9YlVmGCGuxU117CX_I5I9eY78adJ60_La1VVlfdq5RVWq</p>
+              <button class="copy-button" type="button" data-target="ton-address">Copy</button>
+            </div>
+            <p class="hint">TON mainnet</p>
+          </article>
 
-        <article class="wallet-card">
-          <h2>YooMoney</h2>
-          <div class="address-row">
-            <p class="address" id="yoomoney-address">41001779225039</p>
-            <button class="copy-button" type="button" data-target="yoomoney-address">Copy</button>
-          </div>
-          <p class="hint">
-            Deposit via YooMoney wallet or linked cards (MIR, MasterCard, Visa, Maestro).<br />
-            Link: <a href="https://yoomoney.ru/to/41001779225039" target="_blank" rel="noreferrer">yoomoney.ru/to/41001779225039</a>
-          </p>
-        </article>
+          <article class="wallet-card">
+            <h2>YooMoney</h2>
+            <div class="address-row">
+              <p class="address" id="yoomoney-address">41001779225039</p>
+              <button class="copy-button" type="button" data-target="yoomoney-address">Copy</button>
+            </div>
+            <p class="hint">
+              Deposit via YooMoney wallet or linked cards (MIR, MasterCard, Visa, Maestro).<br />
+              Link: <a href="https://yoomoney.ru/to/41001779225039" target="_blank" rel="noreferrer">yoomoney.ru/to/41001779225039</a>
+            </p>
+          </article>
+        </div>
       </section>
 
-      <footer>
+      <footer class="doc-footer">
         <p>Questions or partnerships? Email <a href="mailto:mail@airat.top">mail@airat.top</a>.</p>
         <p>More about AiratTop at <a href="https://airat.top" target="_blank" rel="noreferrer">airat.top</a> or visit <a href="https://github.com/AiratTop" target="_blank" rel="noreferrer">github.com/AiratTop</a>.</p>
         <p>
-          <a href="https://privacy.airat.top" target="_blank" rel="privacy-policy">Privacy Policy</a>
+          <a href="https://privacy.airat.top" target="_blank" rel="noreferrer privacy-policy">Privacy Policy</a>
           |
-          <a href="https://terms.airat.top" target="_blank" rel="terms-of-service">Terms of Use</a>
+          <a href="https://terms.airat.top" target="_blank" rel="noreferrer terms-of-service">Terms of Use</a>
         </p>
       </footer>
     </main>
+
     <script>
       const copyButtons = document.querySelectorAll(".copy-button");
 
