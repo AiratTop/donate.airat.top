@@ -99,7 +99,7 @@ body::before {
 }
 
 .shell {
-  width: min(980px, 100%);
+  width: min(700px, 100%);
   display: grid;
   gap: 24px;
   position: relative;
@@ -190,6 +190,7 @@ body::before {
   margin-top: 0;
   font-size: 1.02rem;
   color: var(--text);
+  text-align: center;
 }
 
 .content .meta {
@@ -278,7 +279,7 @@ body::before {
   align-items: center;
 }
 
-.address {
+.content .address {
   margin: 0;
   font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 0.95rem;
